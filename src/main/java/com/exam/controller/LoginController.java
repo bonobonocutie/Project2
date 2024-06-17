@@ -17,6 +17,7 @@ import com.exam.service.MemberService;
 
 @Controller
 @SessionAttributes(names = {"login"})
+//ahffk
 public class LoginController {
 	// fhrmdls
 	Logger logger = LoggerFactory.getLogger(getClass());
