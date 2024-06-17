@@ -15,6 +15,7 @@ import com.exam.service.GoodsService;
 
 @Controller
 public class MainController {
+	//수정이다
 	Logger logger = LoggerFactory.getLogger(getClass());
 	
 	GoodsService goodsService;
