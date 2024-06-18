@@ -8,11 +8,13 @@
 	             <div class="collapse navbar-collapse">
 	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main">Home</a>
-	                     </li>
+	                         <a class="nav-link" href="main">말괄량이캐릭터굿즈샵</a>
+					
+		                     </li>
 	                 </ul>
 	             </div>
-	             
+	             <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
 	             <!-- 로그인 안된 상태 -->
 	             <!--  session.getAttribute("login")값이 null인 경우 -->
 	             <c:if test="${empty login}">
