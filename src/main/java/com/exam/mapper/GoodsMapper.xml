@@ -5,7 +5,7 @@
   
 <mapper namespace="com.exam.mapper.GoodsMapper">
 	<!-- 상품목록 -->
-	<select id="goodsList" parameterType="string" resultType="GoodsDTO">
+	<select id="goodsList" parameterType="hashmap" resultType="GoodsDTO">
 		select gCode,
 			   gCategory1,
 			   gCategory2,
@@ -13,7 +13,7 @@
 			   gPrice,
 			   gImage
 		from goods2
-		where gCategory1=#{gCategory1}
+		where gCategory1=#{gCategory1} and gCategory2=#{gCategory2}
 	</select>
 	
 	<!-- 상품 자세히 보기 -->
@@ -26,5 +26,17 @@
 			   gImage
 		from goods2
 		where gCode=#{gCode}
+	</select>
+	
+	<!-- 카테고리1 선택 전체목록 -->
+	<select id="goodsListAll" parameterType="string" resultType="GoodsDTO">
+		select gCode,
+			   gCategory1,
+			   gCategory2,
+			   gName,
+			   gPrice,
+			   gImage
+		from goods2
+		where gCategory1=#{gCategory1}
 	</select>
 </mapper>

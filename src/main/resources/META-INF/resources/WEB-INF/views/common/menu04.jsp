@@ -8,27 +8,27 @@
 	             <div class="navbar-collapse">
 	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=top">1</a>
+	                         <a class="nav-link" href="menu?gCategory2=핸드폰케이스">핸드폰케이스</a>
 	                     </li>
 	                 </ul>
 	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=dress">2</a>
+	                         <a class="nav-link" href="menu?gCategory2=인형">인형</a>
 	                     </li>
 	                 </ul>
 	                   <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=outer">3</a>
+	                         <a class="nav-link" href="menu?gCategory2=키링">키링</a>
 	                     </li>
 	                 </ul>
 	                  <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=bottom">4</a>
+	                         <a class="nav-link" href="menu?gCategory2=떡메모지">떡메모지</a>
 	                     </li>
 	                 </ul>
 	                  <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=bottom">4</a>
+	                         <a class="nav-link" href="menu?gCategory2=텀블러">텀블러</a>
 	                     </li>
 	                 </ul>
 	             </div>

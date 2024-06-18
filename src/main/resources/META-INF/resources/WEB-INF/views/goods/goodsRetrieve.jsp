@@ -48,7 +48,7 @@
 		       ${goodsRetrieve.gName}</h6>
 		    <h6 class="card-text">
 		      <span class="fw-bold ">가격:</span>
-		       ${goodsRetrieve.gPrice}</h6>
+		       ${goodsRetrieve.gPrice}원</h6>
 			 
 			      <span class="fw-bold ">주문수량:</span>
 			      <input type="text" name="gAmount" value="1" id="gAmount">

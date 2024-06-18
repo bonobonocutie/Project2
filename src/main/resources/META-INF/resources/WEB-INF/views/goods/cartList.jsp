@@ -22,7 +22,6 @@
                                 <th>전체주문
                                     &nbsp;
                                     <input type="checkbox" name="allCheck" id="allCheck"></th>
-                                <th>번호</th>
                                 <th>상품이미지</th>
                                 <th>상품정보</th>
                                 <th>상품가격</th>
@@ -40,12 +39,11 @@
 						 <input type="hidden" name="num" value="${dto.num}">
 						 <tr>
 				            <td><input type="checkbox" name="check"  class="check"></td> 
-			                <td>${dto.num}</td> 
                             <td><img src="images/items/${dto.goodsList[0].gImage}.png" width="50" height="50" ></td>
                             <td>${dto.gCode}</td>
-                            <td>${dto.goodsList[0].gPrice}</td>
+                            <td>${dto.goodsList[0].gPrice}원</td>
                             <td>${amount}</td>
-                            <td>${dto.goodsList[0].gPrice * amount}</td>
+                            <td>${dto.goodsList[0].gPrice * amount}원</td>
                             <td>${dto.gCartDate}</td>
                             <!-- <td> <a href="cartDelete" class="btn btn-warning" >Delete</a> </td> -->
                             <td> <button type="submit" class="btn btn-warning">Delete</button> </td>
@@ -55,9 +53,8 @@
 					      <td></td>
 					      <td></td>
 					      <td></td>
-					      <td></td>
 					      <td>${dto.gSize}</td>
-					      <td colspan="3">총합: &nbsp; ${sum}</td>
+					      <td colspan="3">총합: &nbsp; ${sum}원</td>
 					      <td> <button class="btn btn-success">전체삭제</button></td>
 					    </tr>
                     </tbody>
