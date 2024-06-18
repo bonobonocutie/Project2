@@ -23,9 +23,9 @@ public class MainController {
 	}
 
 	@GetMapping("/main")
-	public String main(@RequestParam(required = false, defaultValue = "top") String gCategory,
+	public String main(@RequestParam(required = false, defaultValue = "짱구") String gCategory1,
 					   ModelMap m) {
-		List<GoodsDTO> goodsList = goodsService.goodsList(gCategory);
+		List<GoodsDTO> goodsList = goodsService.goodsList(gCategory1);
 		m.addAttribute("goodsList", goodsList);
 		return "main";
 	}

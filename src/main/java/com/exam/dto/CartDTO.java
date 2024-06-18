@@ -11,8 +11,6 @@ public class CartDTO {
 	int num;
 	String userid;
 	String gCode;
-	String gSize;
-	String gColor;
 	int gAmount;
 	LocalDate gCartDate;
 	
@@ -23,13 +21,10 @@ public class CartDTO {
 	public CartDTO() {}
 
 
-	public CartDTO(int num, String userid, String gCode, String gSize, String gColor, int gAmount, LocalDate gCartDate,
-			List<GoodsDTO> goodsList) {
+	public CartDTO(int num, String userid, String gCode, int gAmount, LocalDate gCartDate, List<GoodsDTO> goodsList) {
 		this.num = num;
 		this.userid = userid;
 		this.gCode = gCode;
-		this.gSize = gSize;
-		this.gColor = gColor;
 		this.gAmount = gAmount;
 		this.gCartDate = gCartDate;
 		this.goodsList = goodsList;
@@ -66,26 +61,6 @@ public class CartDTO {
 	}
 
 
-	public String getgSize() {
-		return gSize;
-	}
-
-
-	public void setgSize(String gSize) {
-		this.gSize = gSize;
-	}
-
-
-	public String getgColor() {
-		return gColor;
-	}
-
-
-	public void setgColor(String gColor) {
-		this.gColor = gColor;
-	}
-
-
 	public int getgAmount() {
 		return gAmount;
 	}
@@ -118,9 +93,8 @@ public class CartDTO {
 
 	@Override
 	public String toString() {
-		return "CartDTO [num=" + num + ", userid=" + userid + ", gCode=" + gCode + ", gSize=" + gSize + ", gColor="
-				+ gColor + ", gAmount=" + gAmount + ", gCartDate=" + gCartDate + ", goodsList=" + goodsList + "]";
+		return "CartDTO [num=" + num + ", userid=" + userid + ", gCode=" + gCode + ", gAmount=" + gAmount
+				+ ", gCartDate=" + gCartDate + ", goodsList=" + goodsList + "]";
 	}
-	
 
 }

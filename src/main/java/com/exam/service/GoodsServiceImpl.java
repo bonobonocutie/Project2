@@ -17,8 +17,8 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 
 	@Override
-	public List<GoodsDTO> goodsList(String gCategory) {
-		return goodsMapper.goodsList(gCategory);
+	public List<GoodsDTO> goodsList(String gCategory1) {
+		return goodsMapper.goodsList(gCategory1);
 	}
 
 	@Override

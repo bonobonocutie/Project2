@@ -8,22 +8,27 @@
 	             <div class="navbar-collapse">
 	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=top">top</a>
+	                         <a class="nav-link" href="main?gCategory1=짱구">짱구</a>
 	                     </li>
 	                 </ul>
 	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=dress">dress</a>
+	                         <a class="nav-link" href="main?gCategory1=스폰지밥">스폰지밥</a>
 	                     </li>
 	                 </ul>
 	                   <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=outer">outer</a>
+	                         <a class="nav-link" href="main?gCategory1=포켓몬스터">포켓몬스터</a>
 	                     </li>
 	                 </ul>
-	                   <ul class="navbar-nav">
+	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main?gCategory=bottom">bottom</a>
+	                         <a class="nav-link" href="main?gCategory1=도라에몽">도라에몽</a>
+	                     </li>
+	                 </ul>
+	                 <ul class="navbar-nav">
+	                     <li class="nav-item">
+	                         <a class="nav-link" href="main?gCategory1=명탐정 코난">명탐정 코난</a>
 	                     </li>
 	                 </ul>
 	             </div>

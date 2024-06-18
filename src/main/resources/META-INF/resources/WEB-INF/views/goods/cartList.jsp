@@ -19,7 +19,7 @@
                 <table class="table">
                     <thead>
                             <tr>
-                                <th>전체삭제
+                                <th>전체주문
                                     &nbsp;
                                     <input type="checkbox" name="allCheck" id="allCheck"></th>
                                 <th>번호</th>
@@ -39,16 +39,16 @@
                          <c:set var="sum" value="${dto.goodsList[0].gPrice * amount + sum}"/>
 						 <input type="hidden" name="num" value="${dto.num}">
 						 <tr>
-						            <td><input type="checkbox" name="check"  class="check"></td> 
-					                <td>${dto.num}</td> 
-                                    <td><img src="images/items/${dto.goodsList[0].gImage}.gif" width="50" height="50" ></td>
-                                    <td>${dto.gCode}&nbsp;/&nbsp;${dto.gSize}&nbsp;/&nbsp;${dto.gColor}</td>
-                                    <td>${dto.goodsList[0].gPrice}</td>
-                                    <td>${amount}</td>
-                                    <td>${dto.goodsList[0].gPrice * amount}</td>
-                                    <td>${dto.gCartDate}</td>
-                                    <!-- <td> <a href="cartDelete" class="btn btn-warning" >Delete</a> </td> -->
-                                    <td> <button type="submit" class="btn btn-warning">Delete</button> </td>
+				            <td><input type="checkbox" name="check"  class="check"></td> 
+			                <td>${dto.num}</td> 
+                            <td><img src="images/items/${dto.goodsList[0].gImage}.png" width="50" height="50" ></td>
+                            <td>${dto.gCode}</td>
+                            <td>${dto.goodsList[0].gPrice}</td>
+                            <td>${amount}</td>
+                            <td>${dto.goodsList[0].gPrice * amount}</td>
+                            <td>${dto.gCartDate}</td>
+                            <!-- <td> <a href="cartDelete" class="btn btn-warning" >Delete</a> </td> -->
+                            <td> <button type="submit" class="btn btn-warning">Delete</button> </td>
 						</tr>
 				      </c:forEach>
 					    <tr>
@@ -56,14 +56,15 @@
 					      <td></td>
 					      <td></td>
 					      <td></td>
-					      <td></td>
+					      <td>${dto.gSize}</td>
 					      <td colspan="3">총합: &nbsp; ${sum}</td>
+					      <td> <button class="btn btn-success">전체삭제</button></td>
 					    </tr>
                     </tbody>
 
                   </table>
               </div>
-        </form>
-             <div class="btn btn-success m-5">전체삭제</div>
+        	</form>
+            <div class="btn btn-success m-5">주문하기</div>
         </div>
     </div>

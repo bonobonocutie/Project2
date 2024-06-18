@@ -22,8 +22,7 @@ public class CartAddController {
 	}
 
 	@GetMapping("/cartAdd")
-	public String main(@RequestParam String gSize,
-			@RequestParam String gColor,
+	public String main(
 			@RequestParam String gAmount,
 			@RequestParam String gCode,
 			ModelMap m) {
@@ -33,15 +32,11 @@ public class CartAddController {
 		if (dto != null) {
 			String userid = dto.getUserid();
 
-			System.out.println(gSize);
-			System.out.println(gColor);
 			System.out.println(gAmount);
 			System.out.println(gCode);
 			
 			CartDTO cartDTO = new CartDTO();
 			cartDTO.setUserid(userid);
-			cartDTO.setgSize(gSize);
-			cartDTO.setgColor(gColor);
 			cartDTO.setgAmount(Integer.parseInt(gAmount));
 			cartDTO.setgCode(gCode);
 			
