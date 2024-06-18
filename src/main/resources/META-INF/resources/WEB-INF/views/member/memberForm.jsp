@@ -52,13 +52,15 @@
     prefix="form"%>
 <div class="container">
     <form:form class="row g-3 m-4" modelAttribute="memberDTO" method="post">
+    <label class="mb-3" >회원가입</label>
+    
 		  <div class="row mb-3">
 		    <label for="userid" class="col-sm-2 col-form-label">*아이디</label>
 		    <div class="col-auto">
 		      <form:input type="text" class="form-control" path="userid"/>
 		    </div>
 		    <div class="col-auto">
-			    <button type="button" class="btn btn-primary mb-3" id="idDupulicatedcheck">아이디중복</button>
+			    <button type="button" class="btn btn-outline-warning mb-3" id="idDupulicatedcheck">아이디중복</button>
   			</div>
   			<div class="col-sm-3">
 		         <span id="idcheck" class="fs-5"></span>
@@ -93,7 +95,7 @@
 			    <input type="text" name="post" class="form-control" id="sample4_postcode" placeholder="우편번호">
 			  </div>
 			  <div class="col-auto">
-			    <button type="button" class="btn btn-primary mb-3" onclick="sample4_execDaumPostcode()">우편번호 찾기</button>
+  			  	<button type="button" class="btn btn-outline-warning mb-3" onclick="sample4_execDaumPostcode()">우편번호 찾기</button>
   			  </div>
 		  </div>
 		   <div class="row mb-3">
@@ -148,8 +150,8 @@
 			   </div>	
 		  </div>
 		  <div class="col-12">
-		    <button type="submit" class="btn btn-primary">Sign in</button>
-		    <button type="reset" class="btn btn-primary">cancel</button>
+		    <button type="submit" class="btn btn-outline-warning mb-3" >Sign in</button>
+		    <button type="reset" class="btn btn-outline-warning mb-3">Cancel</button>
 		  </div>
  </form:form>
 	

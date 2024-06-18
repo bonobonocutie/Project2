@@ -32,8 +32,8 @@
 		    </div>
 		  </div>
 		  <div class="col-12">
-		    <button type="submit" class="btn btn-primary">로그인</button>
-		    <button type="reset" class="btn btn-primary">취소</button>
+		  <button type="submit" class="btn btn-outline-warning">로그인</button>
+		  <button type="reset" class="btn btn-outline-warning">취소</button>
 		  </div>
  </form>
 </div> 
