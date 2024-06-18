@@ -25,6 +25,7 @@ public class MainController {
 	}
 
 	@GetMapping("/main")
+	// 메인
 	public String main(@RequestParam(required = false, defaultValue = "짱구") String gCategory1,
 					   ModelMap m) {
 		m.addAttribute("gCategory1",gCategory1);
