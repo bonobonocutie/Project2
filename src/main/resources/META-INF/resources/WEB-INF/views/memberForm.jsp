@@ -4,8 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu&family=Gamja+Flower&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 <title>메인홈페이지</title>
 <style type="text/css">
+*{ 
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+ }
     .App {
 	  text-align: center;
 	  font-size: 16px;
