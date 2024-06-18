@@ -28,6 +28,7 @@ public class MemberController {
 		this.memberService = memberService;
 	}
 	
+	///////////////////////////////////////////////////////////////////////////
 	@GetMapping("/idCheck")
 	public @ResponseBody String idCheck(@RequestParam String userid) {
 		MemberDTO dto = memberService.idCheck(userid);
@@ -40,6 +41,7 @@ public class MemberController {
 		return mesg;
 	}
 
+	///////////////////////////////////////////////////////////////////////////
 	@GetMapping("/signup")
 	public String signup(ModelMap m) {
 		MemberDTO dto = new MemberDTO();
@@ -61,6 +63,7 @@ public class MemberController {
 		return "redirect:main";
 	}
 	
+	///////////////////////////////////////////////////////////////////////////
 	@GetMapping("/mypage")
 	public String mypage(ModelMap m) {
 		// 세션에 저장된 MemberDTO 얻기

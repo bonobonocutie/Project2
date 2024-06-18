@@ -16,11 +16,8 @@ import com.exam.dto.MemberDTO;
 import com.exam.service.MemberService;
 
 @Controller
-@SessionAttributes(names = {"login"})
-//ahffk
+@SessionAttributes(names= {"login"})
 public class LoginController {
-	// fhrmdls
-	Logger logger = LoggerFactory.getLogger(getClass());
 	
 	MemberService memberService;
 	
@@ -41,7 +38,7 @@ public class LoginController {
 		
 		if(dto != null) {
 			// 세션에 저장
-			model.addAttribute("login", dto); // session scope에 저장
+			ModelMap name = model.addAttribute("login", dto); 
 			return "redirect:main";
 		}
 		

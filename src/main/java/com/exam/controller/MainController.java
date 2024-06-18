@@ -15,8 +15,6 @@ import com.exam.service.GoodsService;
 
 @Controller
 public class MainController {
-	//진짜 수정
-	Logger logger = LoggerFactory.getLogger(getClass());
 	
 	GoodsService goodsService;
 	

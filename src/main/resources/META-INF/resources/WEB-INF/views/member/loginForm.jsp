@@ -7,8 +7,8 @@
 		// 로그인 서브밋
 		$("form").on("submit", function(){
 			alert("login submit");
-			this.action = "login";
-			this.method = "post";
+			this.action ="login";
+			this.method ="post";
 		})
 		
 	});
