@@ -31,7 +31,8 @@
 			           class="form-control" id="sample4_postcode" placeholder="우편번호">
 			  </div>
 			  <div class="col-auto">
-			    <button type="button" class="btn btn-primary mb-3" onclick="sample4_execDaumPostcode()">우편번호 찾기</button>
+			 
+			    <button type="button" class=" btn-post mb-3" onclick="sample4_execDaumPostcode()" style="background-color:#BCF2F5;">우편번호 찾기</button>
   			  </div>
 		  </div>
 		   <div class="row mb-3">
@@ -98,8 +99,8 @@
 			</div>
 		  </div>
 		  <div class="col-12">
-		    <button type="submit" class="btn btn-primary">update</button>
-		    <button type="reset" class="btn btn-primary">cancel</button>
+		    <button type="submit" class="btn-update" style="background-color:#BCF2F5;">update</button>
+		    <button type="reset" class="btn-cancel" style="background-color:#BCF2F5;">cancel</button>
 		  </div>
  </form>
 	

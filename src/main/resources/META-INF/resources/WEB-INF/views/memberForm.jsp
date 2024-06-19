@@ -15,6 +15,7 @@
   font-style: normal;
   font-size: 21px;
  }
+ p{font-weight:700; font-size:35px; !important;}
     .App {
 	  text-align: center;
 	  font-size: 16px;
