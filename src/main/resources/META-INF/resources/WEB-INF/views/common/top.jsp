@@ -8,7 +8,9 @@
 	             <div class="collapse navbar-collapse">
 	                 <ul class="navbar-nav">
 	                     <li class="nav-item">
-	                         <a class="nav-link" href="main">말괄량이캐릭터굿즈샵</a>
+	                        <p> <a class="nav-link" href="main">말괄량이캐릭터굿즈샵</a></p>
+	                        
+	                        
 					
 		                     </li>
 	                 </ul>

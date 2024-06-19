@@ -46,7 +46,7 @@
                             <td>${dto.goodsList[0].gPrice * amount}원</td>
                             <td>${dto.gCartDate}</td>
                             <!-- <td> <a href="cartDelete" class="btn btn-warning" >Delete</a> </td> -->
-                            <td> <button type="submit" class="btn btn-warning">Delete</button> </td>
+                            <td> <button type="submit" class="btn-delete m-3" style="background-color:pink;">Delete</button> </td>
 						</tr>
 				      </c:forEach>
 					    <tr>
@@ -55,13 +55,13 @@
 					      <td></td>
 					      <td>${dto.gSize}</td>
 					      <td colspan="3">총합: &nbsp; ${sum}원</td>
-					      <td> <button class="btn btn-success">전체삭제</button></td>
+					      <td> <button class="btn btn-danger">전체삭제</button></td>
 					    </tr>
                     </tbody>
 
                   </table>
               </div>
         	</form>
-            <div class="btn btn-success m-5">주문하기</div>
+            <div><button type="button" class="btn-order m-5" style="background-color:#e9cfec">주문하기</button></div>
         </div>
     </div>

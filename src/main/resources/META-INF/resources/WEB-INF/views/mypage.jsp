@@ -14,6 +14,7 @@
   font-weight: 400;
   font-style: normal;
   font-size:21px; }
+  p{font-weight:700; font-size:35px; !important;}
     .App {
 	  text-align: center;
 	  font-size: 16px;
@@ -29,6 +30,37 @@
 	    position: absolute;
 	    width: 90%;
 	    height: 40px;
+	}
+	.btn-update:hover{
+	color:white;
+	}
+	.btn-update{
+	border-radius: 12px;
+	border:none;
+	width: 100px;
+    height: 50px;}
+    .btn-cancel:hover{
+	color:white;
+	}
+   .btn-cancel:hover{
+	color:white;
+	}
+	.btn-cancel{
+	border-radius: 12px;
+	border:none;
+	width: 100px;
+    height: 50px;}
+    .btn-cancel:hover{
+	color:white;
+	}
+   
+.btn-post{
+	border-radius: 12px;
+	border:none;
+	width: 200px;
+    height: 50px;}
+    .btn-post:hover{
+	color:white;
 	}
  </style>
 <link rel="stylesheet"  href="webjars/bootstrap/5.3.3/css/bootstrap.min.css">

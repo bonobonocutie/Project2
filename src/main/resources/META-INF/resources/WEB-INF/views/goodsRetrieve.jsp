@@ -5,7 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>메인홈페이지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu&family=Gamja+Flower&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
 <style type="text/css">
+*{font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:21px; }
+   p{font-weight:700; font-size:35px; !important;}
+   h9{font-size:50px; !important;}
     .App {
 	  text-align: center;
 	  font-size: 16px;
