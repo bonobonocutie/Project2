@@ -3,7 +3,7 @@
 <script src="webjars/jquery/3.7.1/jquery.min.js"></script>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container">
-    <form class="row g-3 m-4">
+    <form class="row g-3 m-4" method="get" action="infoUpdate">
 		  <div class="row mb-3">
 		    <label for="userid" class="col-sm-2 col-form-label">아이디</label>
 		    <div class="col-auto">

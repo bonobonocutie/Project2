@@ -36,4 +36,9 @@ public class MemberServiceImpl implements MemberService {
 		return memberMapper.mypage(userid);
 	}
 
+	@Override
+	public void mypageUpdate(Map<String, String> map) {
+		memberMapper.mypageUpdate(map);
+	}
+
 }
