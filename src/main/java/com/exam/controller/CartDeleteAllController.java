@@ -13,33 +13,22 @@ import com.exam.service.CartService;
 
 @Controller
 @SessionAttributes(names= {"login"})
-public class CartAddController {
+public class CartDeleteAllController {
+
 	CartService cartService;
 
-	public CartAddController(CartService cartService) {
+	public CartDeleteAllController(CartService cartService) {
 		this.cartService = cartService;
 	}
 
-	@GetMapping("/cartAdd")
-	public String main(
-			@RequestParam String gAmount,
-			@RequestParam String gCode,
-			ModelMap m) {
+	@GetMapping("/cartDeleteAll")
+	public String main(@RequestParam int num, ModelMap m) {
 		System.out.println(m);
 		MemberDTO dto = (MemberDTO) m.getAttribute("login");
 
 		if (dto != null) {
 			String userid = dto.getUserid();
-
-			System.out.println(gAmount);
-			System.out.println(gCode);
-			
-			CartDTO cartDTO = new CartDTO();
-			cartDTO.setUserid(userid);
-			cartDTO.setgAmount(Integer.parseInt(gAmount));
-			cartDTO.setgCode(gCode);
-			
-			cartService.cartAdd(cartDTO);
+			cartService.cartDeleteAll(userid);
 
 			return "redirect:cartList";
 

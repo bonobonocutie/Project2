@@ -27,6 +27,7 @@ public class CartListController {
 		MemberDTO dto = (MemberDTO) m.getAttribute("login");
 
 		List<CartDTO> cartList = cartService.cartList(dto.getUserid());
+//		System.out.println(cartList);
 		m.addAttribute("cartList", cartList);
 
 		return "cartList";
