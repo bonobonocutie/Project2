@@ -13,20 +13,8 @@
 
     <link rel="canonical" href="https://getbootstrap.kr/docs/5.1/examples/checkout/">
 
-    
-
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <style>
       .bd-placeholder-img {
@@ -51,6 +39,7 @@
   <body class="bg-light">
     
 <div class="container">
+<jsp:include page="common/top.jsp" flush="true" /><br>
   <main>
     <div class="py-5 text-center">
       <h2>주문 상세</h2>
@@ -60,7 +49,7 @@
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">주문 상품</span>
-          <span class="badge bg-primary rounded-pill">${numLen}</span>
+          <span class="badge bg-primary rounded-pill">${checkLen}</span>
         </h4>
         <c:set var="sum" value="0"/>
         <c:forEach var="dto" items="${cartList}" varStatus="status">

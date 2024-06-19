@@ -1,5 +1,7 @@
 package com.exam.controller;
 
+import java.util.Map;
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -75,6 +77,19 @@ public class MemberController {
 		m.addAttribute("login", searchDTO);
 		
 		return "mypage";
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	@GetMapping("/infoUpdate")
+	public String infoUpdate(@RequestParam Map<String, String> map,ModelMap m) {
+		// 세션에 저장된 MemberDTO 얻기
+		MemberDTO dto = (MemberDTO)m.getAttribute("login");
+		String userid = dto.getUserid();
+		map.put("userid", userid);
+		
+		memberService.mypageUpdate(map);
+		
+		return "redirect:mypage";
 	}
 	
 }
