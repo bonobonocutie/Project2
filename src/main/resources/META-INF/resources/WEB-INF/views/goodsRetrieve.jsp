@@ -15,7 +15,7 @@
   font-style: normal;
   font-size:21px; }
    p{font-weight:700; font-size:35px; !important;}
-   h9{font-size:50px; !important;}
+  
     .App {
 	  text-align: center;
 	  font-size: 16px;
@@ -32,6 +32,7 @@
 	    width: 90%;
 	    height: 40px;
 	}
+	
  </style>
 <link rel="stylesheet"  href="webjars/bootstrap/5.3.3/css/bootstrap.min.css">
 <script src="webjars/jquery/3.7.1/jquery.min.js"></script>

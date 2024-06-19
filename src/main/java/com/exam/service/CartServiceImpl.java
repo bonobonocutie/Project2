@@ -31,4 +31,14 @@ public class CartServiceImpl implements CartService {
 		return cartMapper.cartDelete(num);
 	}
 
+	@Override
+	public int cartDeleteAll(String userid) {
+		return cartMapper.cartDeleteAll(userid);
+	}
+
+	@Override
+	public CartDTO cartListOrder(int num) {
+		return cartMapper.cartListOrder(num);
+	}
+
 }

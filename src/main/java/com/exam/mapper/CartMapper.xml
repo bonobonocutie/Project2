@@ -40,8 +40,19 @@
         delete from cart
     	where num=#{num}
     </delete>
-
+	
+	<!-- 장바구니 모두 삭제  -->
+    <delete id="cartDeleteAll" parameterType="string">
+        delete from cart
+    	where userid=#{userid}
+    </delete>
     
+    <!-- 주문할 장바구니 -->
+    <select id="cartListOrder" parameterType="int" resultMap="yyy">
+       select *
+       from cart join goods2 on cart.gCode = goods2.gCode
+       where num=#{num}
+    </select>
 </mapper>
 
 
