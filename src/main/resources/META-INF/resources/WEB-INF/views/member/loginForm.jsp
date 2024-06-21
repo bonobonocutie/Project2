@@ -33,7 +33,7 @@
 		    <div>${errorMessage}</div>
 		  </div>
 		  <div class="col-12">
-		  <button type="submit" class="btn btn-outline-warning">login</button>
+		  <button type="submit" class="btn btn-outline-warning">로그인</button>
 		  <button type="reset" class="btn btn-outline-warning">reset</button>
 		  </div>
  </form>
