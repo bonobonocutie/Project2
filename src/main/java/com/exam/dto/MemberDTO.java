@@ -1,13 +1,10 @@
 package com.exam.dto;
 
-import javax.validation.constraints.Size;
-
 import org.apache.ibatis.type.Alias;
 
 @Alias("MemberDTO")
 public class MemberDTO {
 	String userid;
-	@Size(min = 4, message = "4글자 이상입니다.")
 	String passwd;
 	String username;
 	String post;

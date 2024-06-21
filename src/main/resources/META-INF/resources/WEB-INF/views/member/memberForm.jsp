@@ -37,21 +37,21 @@
 			$("#pwdcheck").text(mesg);
 		});
 		
-		// 회원가입 서브밋
-		/*
-		$("form").on("submit", function(){
+		// 회원가입
+		
+	/* 	$("form").on("submit", function(){
 			alert("memberForm submit");
-			this.action = "MemberAddServlet"; // MemberAddServlet 맵핑값
+			this.action = "signup";
 			this.method = "post";
-		});
-		*/
+		}); */
+		
 	});
 	
 </script>
 <%@ taglib uri="http://www.springframework.org/tags/form" 
     prefix="form"%>
 <div class="container">
-    <form:form class="row g-3 m-4" modelAttribute="memberDTO" method="post">
+    <form:form class="row g-3 m-4" modelAttribute="memberDTO" method="post" action="signup">
     <label class="mb-3" >회원가입</label>
     
 		  <div class="row mb-3">
