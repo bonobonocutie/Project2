@@ -100,7 +100,7 @@
 		  </div>
 		  <div class="col-12">
 		    <button type="submit" class="btn-update" style="background-color:#BCF2F5;">update</button>
-		    <button type="reset" class="btn-cancel" style="background-color:#BCF2F5;">cancel</button>
+		    <button type="reset" class="btn-cancel" style="background-color:#BCF2F5;">reset</button>
 		  </div>
  </form>
 	

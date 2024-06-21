@@ -51,6 +51,17 @@
 	border:none;
 	width: 200px;
     height: 50px;}
+    .btn-post:hover{
+	color:white;
+	}
+	.btn-post{
+	
+	border:none;
+	border-radius: 12px;
+	border:none;
+	width: 200px;
+    height: 50px;}
+	
     </style>
 
     
