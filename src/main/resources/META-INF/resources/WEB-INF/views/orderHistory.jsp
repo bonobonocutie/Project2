@@ -16,6 +16,7 @@
   font-style: normal;
   font-size: 21px;
  }
+ 
  p{font-weight:700; font-size:24px; !important;}
 
     .App {
