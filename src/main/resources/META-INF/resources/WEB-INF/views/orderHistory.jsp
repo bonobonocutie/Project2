@@ -12,11 +12,12 @@
 <style type="text/css">
 *{ 
   font-family: "Gaegu", sans-serif;
-  font-weight: 400;
+  
   font-style: normal;
   font-size: 21px;
  }
- p{font-weight:700; font-size:26px; !important;}
+ p{font-weight:700; font-size:24px; !important;}
+
     .App {
 	  text-align: center;
 	  font-size: 16px;
