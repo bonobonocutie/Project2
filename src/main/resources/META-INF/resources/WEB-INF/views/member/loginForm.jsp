@@ -6,8 +6,7 @@
 	$(document).ready(function() {
 		// 로그인 서브밋
 		$("form").on("submit", function(){
-			
-			this.action ="login";
+			this.action ="auth";
 			this.method ="post";
 		})
 		
