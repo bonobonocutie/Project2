@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.exam.mapper.OrderinfoMapper">
+
+	<!-- 주문 내역 추가 -->
+	<insert id="orderinfoAdd" parameterType="OrderinfoDTO">
+		insert into orderinfo(userid, gName, gPrice, gImage, gAmount, addr1,
+					phone, total, orderDay, meg, payment)
+		values(#{userid}, #{gName}, #{gPrice}, #{gImage}, #{gAmount}, #{addr1}, 
+				#{phone}, #{total}, #{orderDay}, #{meg}, #{payment})
+	</insert>
+	
+	<!-- 장바구니 삭제 -->
+	<delete id="orderinfoDelete" parameterType="int">
+		delete from cart
+		where num=#{num}
+	</delete>
+	
+	<!-- 주문내역 출력 -->
+	<select id="orderinfoList" parameterType="map" resultType="OrderinfoDTO">
+       select *
+       from orderinfo
+       where orderDay=#{orderDay} and userid=#{userid}
+    </select>
+	
+</mapper>

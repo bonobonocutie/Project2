@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -55,11 +56,13 @@ public class MemberController {
 	@PostMapping("/signup")
 	public String signup(@Valid MemberDTO dto, BindingResult result) {
 		if(result.hasErrors()) {
+			
 			return "memberForm";
 		}
 		
-		// DB 연동
-		logger.info("logger:signup:{}", dto);
+		String encptPw = new BCryptPasswordEncoder().encode(dto.getPasswd());
+		dto.setPasswd(encptPw);
+		
 		int n = memberService.memberAdd(dto);
 		
 		return "redirect:main";
