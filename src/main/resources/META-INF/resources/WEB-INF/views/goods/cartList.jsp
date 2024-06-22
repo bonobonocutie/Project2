@@ -25,6 +25,23 @@
         });
 	}
 	
+/* 	$(document).ready(function() {
+		$(".check").change(function(){
+	         if($(".check").is(":checked")){
+	            console.log($(".check").val());
+	        }else{
+	            console.log("bb");
+	        	
+	        } 
+	        $('input:checkbox[name=check]').each(function () {
+				if($(this).is(":checked")==true){
+			    	 console.log($(this).val());
+			    }
+			});
+	    });
+	}); */
+	
+	
 </script>	
   <div class="TodoApp">
     <div class="container">
@@ -52,7 +69,7 @@
                          <c:set var="sum" value="${dto.goodsList[0].gPrice * amount + sum}"/>
 						 <input type="hidden" name="num" value="${dto.num}">
 						 <tr>
-				            <td><input type="checkbox" name="check"  class="check" value="${dto.num}"></td> 
+				            <td><input type="checkbox" name="check" class="check" value="${dto.num}"></td> 
                             <td><img src="images/items/${dto.goodsList[0].gImage}.png" width="100" height="100" ></td>
                             <td>${dto.goodsList[0].gName}</td>
                             <td>${dto.goodsList[0].gPrice}원</td>

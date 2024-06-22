@@ -1,9 +1,5 @@
 package com.exam.controller;
 
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -49,7 +45,7 @@ public class LoginController {
 	
 	@PostMapping(value={"/login_fail"})
 	public String failPage(ModelMap model) {
-		model.addAttribute("errorMessage", "아이디 및 비번 확인 필요."); // request scope에 저장 
+		model.addAttribute("errorMessage", "아이디 및 비번을 다시 확인해주세요."); // request scope에 저장 
 		return "loginForm";
 	}
 	
@@ -66,13 +62,26 @@ public class LoginController {
 //		model.addAttribute("login", dto); 
 //		
 //		System.out.println(dto);
+//		
+//		response.setContentType("text/html; charset=UTF-8");
+//		PrintWriter out;
+//		try {
+//			out = response.getWriter();
+//			out.println("<script>alert('로그인 되었습니다.'); location.href='/shop/main';</script>");
+//			out.flush();
+//			
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		
 		return "redirect:main";
 	}
 	
 	@GetMapping("/logout")
 	public String logout(SessionStatus status) {
+		
 		status.setComplete();
+		
 		return "redirect:main";
 	}
 	

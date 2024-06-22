@@ -13,8 +13,7 @@ public class SecurityFilterChainConfig {
 		// 1. 불필요한 인증제거
 		http.authorizeHttpRequests()
 			.antMatchers("/login","/goodsRetrieve","/main","/signup","/menu",
-					"/idCheck",
-					"/resources/**","/webjars/**","/images/**").permitAll()
+					"/idCheck","/webjars/**","/images/**").permitAll()
 //			.antMatchers("/**").permitAll()
 			.anyRequest()
 			.authenticated();

@@ -17,8 +17,8 @@
   
 	             <!-- 로그인 안된 상태 -->
 	             <!--  session.getAttribute("login")값이 null인 경우 -->
-	             <c:if test="${empty login}">
-	             <%-- <sec:authorize access="isAnonymous()"> --%>
+	             <%-- <c:if test="${empty login}"> --%>
+	             <sec:authorize access="isAnonymous()">
 	              <ul class="navbar-nav">
 	                  <li class="nav-item">
 	                     <a class="nav-link" href="login">Login</a>
@@ -27,13 +27,13 @@
 	                     <a class="nav-link" href="signup">signup</a>
 	                  </li>
 	              </ul>
-	              <%-- </sec:authorize> --%>
-	             </c:if>
+	              </sec:authorize>
+	             <%-- </c:if> --%>
 	             
 	             <!--  로그인 된 상태 -->
 	             <!--  session.getAttribute("login")값이 null이 아닌 경우 -->
-	             <c:if test="${!empty login}">
-	             <%-- <sec:authorize access="isAuthenticated()"> --%>
+	             <%-- <c:if test="${!empty login}"> --%>
+	             <sec:authorize access="isAuthenticated()">
 	              <ul class="navbar-nav">
 	                  <li class="nav-item">
 	                     <a class="nav-link" href="logout">logout</a>
@@ -48,8 +48,8 @@
 	                     <a class="nav-link" href="orderHistory">orderHistory</a>
 	                  </li>
 	              </ul>
-	              <%-- </sec:authorize> --%>
-	             </c:if>
+	              </sec:authorize>
+	             <%-- </c:if> --%>
 	         </nav>
 	     </div>
 	 </div>
