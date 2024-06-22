@@ -107,6 +107,7 @@ public class OrderController {
 		
 		List<OrderinfoDTO> oh = new ArrayList<>();
 		List<OrderinfoDTO> join = new ArrayList<>();
+		List<List<OrderinfoDTO>> join2 = new ArrayList<>();
 		
 		Map<String, Object> map= new HashMap<>();
 		MemberDTO dto = (MemberDTO)m.getAttribute("login");
@@ -114,14 +115,19 @@ public class OrderController {
 //		System.out.println(userid);
 		
 		for (long i = 0; i <= diff; i++) {
-			pre = pre.plusDays(1);
 			map.clear();
 			map.put("userid", userid);
-			map.put("orderDay", pre);
+			map.put("orderDay", now);
 			oh = orderinfoService.orderinfoList(map);
 			join.addAll(oh);
-			
+			if(oh.isEmpty()) {
+				
+			}else {
+				join2.add(new ArrayList<>(oh));
+				oh.clear();
+			}
 			oh.clear();
+			now = now.minusDays(1);
 		}
 		
 //		for (OrderinfoDTO orderinfoDTO : join) {
@@ -129,6 +135,7 @@ public class OrderController {
 //			
 //		}
 		m.addAttribute("orderList",join);
+		m.addAttribute("orderList2",join2);
 		
 		return "orderHistory";
 	}

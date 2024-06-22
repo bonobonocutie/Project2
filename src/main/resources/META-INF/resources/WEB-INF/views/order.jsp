@@ -137,7 +137,7 @@
             <div class="col-12">
               <label for="username" class="form-label">전화번호</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" name="phone">
+                <input type="text" class="form-control" name="phone" value="${login.phone1}-${login.phone2}-${login.phone3}">
                 <%-- <input type="text" class="form-control" value="${login.phone2}" disabled>
                 <input type="text" class="form-control" value="${login.phone2}" disabled> --%>
               </div>
@@ -150,10 +150,7 @@
               <button type="button" class=" btn-post" onclick="sample4_execDaumPostcode()" style="background-color:#BCF2F5;">우편번호 찾기</button>
               <input type="text"  name="addr1" class="form-control" name="addr1" id="sample4_roadAddress" value="${login.addr1}">
               <input type="text" name="addr2" class="form-control" id="sample4_jibunAddress" value="${login.addr2}">
-              
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
+              <span id="guide" style="color:#999"></span>
             </div>
 
 			<!-- 배송 메세지 -->
@@ -201,8 +198,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="form-validation.js"></script>
-  </body>
-  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+</body>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
     //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
     function sample4_execDaumPostcode() {

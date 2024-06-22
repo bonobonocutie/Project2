@@ -26,6 +26,26 @@
 			});
 		});
 		
+		// 아이디 길이
+		$("#userid").on("keyup", function(){
+			var userid = $("#userid").val();
+			var mesg = "";
+			if(userid.length < 6){
+				mesg = "길이가 6에서 20 사이여야 합니다.";
+			}
+			$("#idsize").text(mesg);
+		});
+		
+		// 비번 길이
+		$("#passwd").on("keyup", function(){
+			var passwd = $("#passwd").val();
+			var mesg = "";
+			if(passwd.length < 6){
+				mesg = "길이가 6에서 20 사이여야 합니다.";
+			}
+			$("#pwsize").text(mesg);
+		});
+		
 		// 비번 확인
 		$("#passwd2").on("keyup", function(){
 			var passwd = $("#passwd").val();
@@ -37,14 +57,12 @@
 			$("#pwdcheck").text(mesg);
 		});
 		
-		// 회원가입
-		
-	/* 	$("form").on("submit", function(){
-			alert("memberForm submit");
-			this.action = "signup";
-			this.method = "post";
-		}); */
-		
+		// 이메일 선택
+		$("#email3").on("change", function(){
+			var email = $("#email3").val();
+			console.log(email)
+			$("#email2").val(email);
+		});
 	});
 	
 </script>
@@ -58,13 +76,17 @@
 		    <label for="userid" class="col-sm-2 col-form-label">*아이디</label>
 		    <div class="col-auto">
 		      <form:input type="text" class="form-control" path="userid"/>
+		      <form:errors path="userid"></form:errors>
+		    </div>
+		    <div class="col-auto">
+		      <span id="idsize" class="fs-5"></span>
 		    </div>
 		    <div class="col-auto">
 			    <button type="button" class="btn btn-outline-warning mb-3" id="idDupulicatedcheck">아이디중복</button>
   			</div>
-  			<div class="col-sm-3">
+  			<div class="col-auto">
 		         <span id="idcheck" class="fs-5"></span>
-		        </div>
+		    </div>
 		  </div>
 		 <div class="row mb-3">
 		    <label for="password" class="col-sm-2 col-form-label">*비밀번호</label>
@@ -72,13 +94,16 @@
 		      <form:input type="password" class="form-control" path="passwd"/>
 		      <form:errors path="passwd"></form:errors>
 		    </div>
+		    <div class="col-auto">
+		      <span id="pwsize" class="fs-5"></span>
+		    </div>
 		  </div>
 		  <div class="row mb-3">
 		    <label for="passwd2" class="col-sm-2 col-form-label">비밀번호확인</label>
-		    <div class="col-sm-5">
+		    <div class="col-auto">
 		      <input type="password" class="form-control" name="passwd2" id="passwd2">
 		    </div>
-		    <div class="col-sm-3">
+		    <div class="col-auto">
 		      <span id="pwdcheck" class="fs-5"></span>
 		    </div>
 		  </div>
@@ -128,7 +153,7 @@
 			</div>
 		  </div>
 		  <div class="row mb-3">
-			  <label for="email1" class="col-sm-2 col-form-label">이메일:</label>
+			  <label for="email1" class="col-sm-2 col-form-label">이메일</label>
 		    <div class="col-auto">
 			  <input type="text" name="email1" class="form-control" id="email1">
 			</div>

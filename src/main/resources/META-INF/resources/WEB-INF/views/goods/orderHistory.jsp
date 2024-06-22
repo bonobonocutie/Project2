@@ -6,10 +6,10 @@
     <div class="container">
     	<%-- <c:forEach var="dto" items="${orderList}" varStatus="status"> --%>
             <div>
-            <c:forEach var="dto" items="${orderList}" varStatus="status">
-                <p style="text-align:left">주문일자: ${dto.orderDay}</p>
-                <p style="text-align:left">전화번호: ${dto.phone}, 주소: ${dto.addr1}</p>
-                <p style="text-align:left">배송 메세지: ${dto.meg}, 결제정보: ${dto.payment}</p>
+            <c:forEach var="dto" items="${orderList2}" varStatus="status">
+                <p style="text-align:left">주문일자: ${dto.get(0).orderDay}</p>
+                <p style="text-align:left">전화번호: ${dto.get(0).phone}, 주소: ${dto.get(0).addr1}</p>
+                <p style="text-align:left">배송 메세지: ${dto.get(0).meg}, 결제정보: ${dto.get(0).payment}</p>
                 <table class="table">
                     <thead>
                             <tr>
@@ -22,27 +22,25 @@
                     </thead>
                     <tbody>
                       <c:set var="sum" value="0"/>
-                      	 
-                         <c:set var="amount" value="${dto.gAmount}"/>
-                         <c:set var="sum" value="${dto.gPrice * amount + sum}"/>
+                      	 <c:forEach var="dto2" items="${dto}" varStatus="status">
+                         <c:set var="amount" value="${dto2.gAmount}"/>
+                         <c:set var="sum" value="${dto2.gPrice * amount + sum}"/>
 						 <%-- <input type="hidden" name="num" value="${dto.num}"> --%>
 						 <tr>
-                            <td><img src="images/items/${dto.gImage}.png" width="100" height="100" ></td>
-                            <td>${dto.gName}</td>
-                            <td>${dto.gPrice}원</td>
+                            <td><img src="images/items/${dto2.gImage}.png" width="100" height="100" ></td>
+                            <td>${dto2.gName}</td>
+                            <td>${dto2.gPrice}원</td>
                             <td>${amount}</td>
-                            <td>${dto.orderDay}</td>
+                            <td>${dto2.orderDay}</td>
 						</tr>
-				      <%-- </c:forEach> --%>
-					    <%-- <tr>
+						</c:forEach>
+					    <tr>
 					      <td></td>
 					      <td></td>
+					      <td>총합: &nbsp; ${sum}원</td>
 					      <td></td>
 					      <td></td>
-					      <td colspan="3">총합: &nbsp; ${dto.total}원</td>
-					    </tr> --%>
                     </tbody>
-
                   </table>
                   <p>&nbsp;</p>
              </c:forEach>

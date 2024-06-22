@@ -1,10 +1,13 @@
 package com.exam.dto;
 
 import org.apache.ibatis.type.Alias;
+import org.hibernate.validator.constraints.Length;
 
 @Alias("MemberDTO")
 public class MemberDTO {
+	@Length(min = 6, max = 20)
 	String userid;
+	@Length(min = 6, max = 20)
 	String passwd;
 	String username;
 	String post;
